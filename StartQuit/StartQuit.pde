@@ -1,10 +1,52 @@
-//Global Varaiables
+//Global Variables
+int appWidth, appHeight;
+Boolean start=false, noNowReallyStart=false;
+float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
-void setup() {} // End setup
+void setup()
+{
+  //Display & Orientation Algorithms not consider yet
+  size(400, 300); //Landscape
+  //fullScreen(); //displayWidth, displayHeight
+  appWidth = width;
+  appHeight = height;
+  //
+  //Population
+  float centerX = appWidth * 1/2;
+  float centerY = appHeight * 1/2;
+  quitButtonX = centerX;
+  quitButtonY = centerY;
+  quitButtonWidth = ;
+  quitButtonHeight = ;
+} //End setup
 //
-void draw () {} //End keyPresssed
+void draw ()
+{
+  if ( noNowReallyStart==true ) {
+    background(0); //Night Mode not considered yet
+    rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight ); //Quit Button with Hoverover
+  }
+} //End draw
 //
-void mousePressed () {} // EndmousePressed
+void keyPressed ()
+{
+  //Post-OS Level Start Button
+  if ( key==' ' && start==true) noNowReallyStart = true;
+  //
+  //Prototype Key Board Quit Button OR Shortcut
+  if ( key=='Q' || key=='q') exit() ;
+  if ( key==CODED && keyCode == ESC ) exit();
+  //
+} //End KeyPressed
+//
+void mousePressed()
+{
+  //
+  //OS Level Start Button
+  start = true;
+  println("To Start, Press the Space Bar");
+  //
+} //End mousePressed
 //
 //End Main Program
 //
