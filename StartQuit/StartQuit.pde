@@ -41,9 +41,10 @@ void mousePressed()
   start = true;
   println("To Start, Press the Space Bar");
   //Hint Bug if continue pressing mouse
-  //    
-  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) exit();
   //
+  //Quit Button: Logical Rectangle, see println in draw()
+  if ( mouseX<quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) exit();
+  // Press Q to close the program
 } //End mousePressed
 //
 //End Main Program
